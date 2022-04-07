@@ -1,0 +1,70 @@
+"student": [
+	{
+		"student_id": 0000,
+		"first_name": "Jenny",
+		"last_name": "Swells",
+		"enrollment_fields": [
+			{
+				"term": "Spring",
+				"course_fields": [
+					{
+						"id": 2060
+					},
+					{
+						"id": 2061
+					}
+				]
+			},
+			{
+				"term": "Fall",
+				"course_fields": [{ "id": 3040 }]
+			}
+		]
+	}
+],
+"enrollment_fields": [
+	{
+		"term": "Spring",
+		"gpa": "3.8",
+		"start_date": "01/03/1869",
+		"end_date": "05/30/1869",
+		"course_fields": [
+			{
+				"id": 2060
+			},
+			{
+				"id": 2061
+			}
+		]
+	},
+	{
+		"term": "Fall",
+		"gpa": "4.0",
+		"start_date": "09/03/2020",
+		"end_date": "12/17/2020",
+		"course_fields": [{ "id": 3040 }]
+	}
+],
+"course_fields": [
+	{
+		"course_id": 2060,
+		"description": "Writing",
+		"instructor": "Mark Twain",
+		"grade": "3.8",
+		"enrollment_fields": [{ "term": "Spring" }]
+	},
+	{
+		"course_id": 2061,
+		"description": "Something else",
+		"instructor": "Somebody else",
+		"grade": "3.8",
+		"enrollment_fields": [{ "term": "Spring" }]
+	},
+	{
+		"course_id": 3040,
+		"description": "Fish hobby",
+		"instructor": "Erika Vanderhoff",
+		"grade": "4.0",
+		"enrollment_fields": [{ "term": "Fall" }]
+	}
+]

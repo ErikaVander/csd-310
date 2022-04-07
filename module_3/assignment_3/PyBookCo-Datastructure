@@ -1,0 +1,201 @@
+"author": [
+	{
+		"first_name": "Bob",
+		"laste_name": "Hyper",
+		"phone": "000-000-0000",
+		"email": "Bob0H@email.com",
+		"book": [
+			{
+				"_isbn": "000-0-00-000000-0",
+				"name": "A Book",
+				"price": "$10.00",
+				"publisher: [
+					{
+						"name": "RandomHut ink.",
+						"_code": "000",
+						"address": "0001 NE 200th..."
+					}
+				]
+			},
+			{
+				"_isbn": "003-2-00-000000-2"
+				"name": "Two Authors",
+				"price": "$12.00",
+				"publisher: [
+					{
+						"name": "PuffinHouse ink.",
+						"_code": "003",
+						"address": "0002 SW 115th..."
+					}
+				]
+			}
+		]
+	},
+	{
+		"first_name": "Bobby",
+		"laste_name": "Hippo",
+		"phone": "000-111-0000",
+		"email": "Bobby1H@email.com",
+		"book": [
+			{
+				"_isbn": "000-0-00-000000-2",
+				"name": "A Bookish",
+				"price": "$1.99",
+				"publisher: [
+					{
+						"name": "RandomHut ink.",
+						"_code": "000",
+						"address": "0001 NE 200th..."
+					}
+				]
+			},
+			{
+				"_isbn": "003-2-00-000000-2"
+				"name": "Two Authors",
+				"price": "$12.00",
+				"publisher: [
+					{
+						"name": "PuffinHouse ink.",
+						"_code": "003",
+						"address": "0002 SW 115th..."
+					}
+				]
+			}
+		]
+	}
+]
+"publisher": [
+	{
+		"name": "RandomHut ink.",
+		"_code": "000",
+		"address": "0001 NE 200th...",
+		"book": [
+			{
+				"_isbn": "000-0-00-000000-0",
+				"name": "A Book",
+				"price": "$10.00",
+				"author": [
+					{
+						"first_name": "Bob",
+						"laste_name": "Hyper",
+						"phone": "000-000-0000",
+						"email": "Bob0H@email.com"
+					}
+				]
+			},
+			{
+				"_isbn": "000-0-00-000000-2",
+				"name": "A Bookish",
+				"price": "$1.99",
+				"author": [
+					{
+						"first_name": "Bobby",
+						"laste_name": "Hippo",
+						"phone": "000-111-0000",
+						"email": "Bobby1H@email.com"
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "PuffinHouse ink.",
+		"_code": "003",
+		"address": "0002 SW 115th...",
+		"book": [
+			{
+				"_isbn": "003-2-00-000000-2"
+				"name": "Two Authors",
+				"price": "$12.00",
+				"author": [
+					{
+						"first_name": "Bob",
+						"laste_name": "Hyper",
+						"phone": "000-000-0000",
+						"email": "Bob0H@email.com"
+					},
+					{
+						"first_name": "Bobby",
+						"laste_name": "Hippo",
+						"phone": "000-111-0000",
+						"email": "Bobby1H@email.com"
+					}
+				]
+			}
+		]
+	}
+]
+"book": [
+	{
+		"_isbn": "000-0-00-000000-0",
+		"name": "A Book",
+		"price": "$10.00",
+		"author": [
+			{
+				"first_name": "Bob",
+				"laste_name": "Hyper",
+				"phone": "000-000-0000",
+				"email": "Bob0H@email.com"
+			}
+		],
+		"publisher: [
+			{
+				"name": "RandomHut ink.",
+				"_code": "000",
+				"address": "0001 NE 200th..."
+			}
+		]
+	},
+	{
+		"_isbn": "000-0-00-000000-2",
+		"name": "A Bookish",
+		"price": "$1.99",
+		"author": [
+			{
+				"first_name": "Bobby",
+				"laste_name": "Hippo",
+				"phone": "000-111-0000",
+				"email": "Bobby1H@email.com"
+			}
+		],
+		"publisher: [
+			{
+				"name": "RandomHut ink.",
+				"_code": "000",
+				"address": "0001 NE 200th..."
+			}
+		]
+	},
+	{
+		"_isbn": "003-2-00-000000-2"
+		"name": "Two Authors",
+		"price": "$12.00",
+		"author": [
+			{
+				"first_name": "Bob",
+				"laste_name": "Hyper",
+				"phone": "000-000-0000",
+				"email": "Bob0H@email.com"
+			},
+			{
+				"first_name": "Bobby",
+				"laste_name": "Hippo",
+				"phone": "000-111-0000",
+				"email": "Bobby1H@email.com"
+			}
+		],
+		"publisher: [
+			{
+				"name": "PuffinHouse ink.",
+				"_code": "003",
+				"address": "0002 SW 115th..."
+			}
+		]
+	}
+]
+
+
+
+
+
+

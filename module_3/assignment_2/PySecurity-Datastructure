@@ -1,0 +1,186 @@
+"user": [
+	{
+		"name": "Natalie",
+		"_id": 1,
+		"link_user_role": [
+			{
+				"role": {
+					"role_id": 0001,
+					"role_name": "admin",
+					"link_role_permission": [
+						{
+							"permission_id": 03,
+							"permission": "matchClientsWithEditors"
+						},
+						{
+							"permission_id": 01,
+							"permission": "read"
+						}
+					]
+				}
+			},
+			{
+				"role": {
+					"role_id": 0002,
+					"role_name": "editor",
+					"link_role_permission": [
+						{
+							"permission_id": 01,
+							"permission": "read"
+						},
+						{
+							"permission_id": 02,
+							"permission": "suggestWrites"
+						}
+					]
+				}
+			}
+		]
+	},
+	{
+		"name": "Bob",
+		"_id": 0002,
+		"link_user_role": [
+			{
+				"user_id": 2,
+				"role": {
+					"role_id": 0002,
+					"role_name": "editor",
+					"link_role_permission": [
+						{
+							"permission_id": 01,
+							"permission": "read"
+						},
+						{
+							"permission_id": 02,
+							"permission": "suggestWrites"
+						}
+					]
+				}
+			}
+		]
+	}
+]
+
+"role": [
+	{
+		"_id": 0001,
+		"role_name": "admin",
+		"link_user_role": [
+			{	
+				"user_id": 1,
+				"user_name": "Natalie"
+			}
+		],
+		"link_role_permission": [
+			{
+				"permission_id": 03,
+				"permission": "matchClientsWithEditors"
+			},
+			{
+				"permission_id": 01,
+				"permission": "read"
+			}
+		]
+	},
+	{
+		"_id": 0002,
+		"role_name": "editor",
+		"link_user_role": [
+			{
+				"user_id": 1,
+				"user_name": "Natalie"
+			},
+			{
+				"user_id": 2,
+				"user_name": "Bob"
+
+			}
+		],
+		"link_role_permission": [
+			{
+				"permission_id": 01,
+				"permission": "read"
+			},
+			{
+				"permission_id": 02,
+				"permission": "suggestWrites"
+			}
+		]
+	}
+]
+
+"permission": [
+	{
+		"_id": 01,
+		"permission": "read",
+		"link_role_permission": [
+			{	
+				"role_id": 0001,
+				"role_name": "admin"
+			},
+			{
+				"role_id": 0002,
+				"role_name": "editor"
+
+			}
+		]
+	},
+	{
+		"_id": 02,
+		"permission": "suggestWrites",
+		"link_role_permission": [
+			{	
+				"role_id": 0001,
+				"role_name": "editor"
+			},
+		]
+	},
+	{
+		"_id": 03,
+		"permission": "matchClientWithEditors",
+		"link_role_permission": [
+			{	
+				"role_id": 0001,
+				"role_name": "admin"
+		]
+	}
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
