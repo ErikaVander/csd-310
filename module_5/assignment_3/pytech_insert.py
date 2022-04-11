@@ -5,10 +5,12 @@
 
 from pymongo import MongoClient
 
+#Connecting to MongoDB
 url = "mongodb+srv://admin:admin@cluster0.h2zva.mongodb.net/pytech?retryWrites=true&w=majority"
 client = MongoClient(url)
 db = client.pytech
 
+#Creating objects fred, thorin, and bilbo
 fred = {
    "student_id": "1007",
    "first_name": "Fred",
@@ -25,10 +27,12 @@ bilbo = {
    "last_name": "Baggins"
 }
 
+#Adding created objects to student collection
 fred_student_id = db.students.insert_one(fred).inserted_id
 thorin_student_id = db.students.insert_one(thorin).inserted_id
 bilbo_student_id = db.students.insert_one(bilbo).inserted_id
 
+#Informing users of the added students
 print()
 print("-- INSERT STATEMENTS --")
 print("Inserted student record "+ fred["first_name"] + " " + fred["last_name"] + " into the students collection with document_id " + str(fred_student_id))
