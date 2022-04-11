@@ -12,7 +12,7 @@ db = client.pytech
 fred = {
    "student_id": "1007",
    "first_name": "Fred",
-   "last_name": "Commons"
+   "last_name": "Commons",
 }
 thorin = {
    "student_id": "1008",
