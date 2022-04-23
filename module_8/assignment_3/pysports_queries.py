@@ -1,7 +1,13 @@
+#Erika Vanderhoff
+#csd 310
+#assignment_8.3
+#4/22/22
+
 from tkinter.tix import Select
 import mysql.connector
 from mysql.connector import errorcode
 
+#creating user object to use to connect to mysql.pysports
 config = {
    "user": "pysports_user",
    "password": "MYSQL8IsGreat!",
@@ -10,6 +16,7 @@ config = {
    "raise_on_warnings": True 
 }
 
+#try connecting otherwise print error messages
 try:
    db = mysql.connector.connect(**config)
 
@@ -25,21 +32,25 @@ except mysql.connector.Error as err:
    else:
       print(err)
 
+#create cursor object
 cursor = db.cursor()
 
+#getting team_id, team_name, and mascot from row team
 cursor.execute("SELECT team_id, team_name, mascot FROM team")
 teams = cursor.fetchall()
 
-
+#using for loop to display team_id, team_name, and mascot
 print("\n-- DISPLAYING TEAM RECORDS --")
 for team in teams:
    print("Team ID: {}".format(team[0]))
    print("Team Name: {}".format(team[1]))
    print("Mascot: {}\n".format(team[2]))
 
+#getting player_id, first_name, and last_name from row player
 cursor.execute("SELECT player_id, first_name, last_name, team_id FROM player")
 players = cursor.fetchall()
 
+#using for loop to display player_id, first_name, last_name and team_id
 print("-- DISPLAYING PLAYER RECORDS --")
 for player in players:
    print("Player ID: {}".format(player[0]))
@@ -47,5 +58,6 @@ for player in players:
    print("Last Name: {}".format(player[2]))
    print("Team ID: {}\n".format(player[3]))
 
+#waiting till using wishes to exit program by pressing enter key
 input("\n\n   Press any key to continue...")
 db.close()
