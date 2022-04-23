@@ -1,6 +1,12 @@
+#Erika Vanderhoff
+#csd 310
+#assignment_8.2
+#4/22/22
+
 import mysql.connector
 from mysql.connector import errorcode
 
+#creating user object to use to connect to mysql.pysports
 config = {
    "user": "pysports_user",
    "password": "MYSQL8IsGreat!",
@@ -9,6 +15,7 @@ config = {
    "raise_on_warnings": True 
 }
 
+#try connecting otherwise print error messages
 try:
    db = mysql.connector.connect(**config)
 
@@ -26,5 +33,6 @@ except mysql.connector.Error as err:
    else:
       print(err)
 
+#close db at the end
 finally:
    db.close()
