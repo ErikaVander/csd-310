@@ -1,8 +1,9 @@
 #Erika Vanderhoff
 #csd 310
-#assignment_8.2
-#4/22/22
+#assignment_9.2
+#4/25/22
 
+from tkinter.tix import Select
 import mysql.connector
 from mysql.connector import errorcode
 
@@ -21,8 +22,6 @@ try:
 
    print("\n   Database user {} connected to MySQL on host {} with database {}".format(config["user"], config["host"], config["database"]))
 
-   input("\n\n   Press any key to continue...")
-
 except mysql.connector.Error as err:
    if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
       print("  The supplied username or password are invalid")
@@ -33,7 +32,21 @@ except mysql.connector.Error as err:
    else:
       print(err)
 
-#close db at the end
-finally:
-   db.close()
-   
+#create cursor object
+cursor = db.cursor()
+
+#getting player_id, first_name, and last_name from row player
+cursor.execute("SELECT player_id, first_name, last_name, team_name FROM player INNER JOIN team ON player.team_id = team.team_id")
+players = cursor.fetchall()
+
+#using for loop to display player_id, first_name, last_name and team_id
+print("\n-- DISPLAYING PLAYER RECORDS --")
+for player in players:
+   print("Player ID: {}".format(player[0]))
+   print("First Name: {}".format(player[1]))
+   print("Last Name: {}".format(player[2]))
+   print("Team Name: {}\n".format(player[3]))
+
+#waiting till using wishes to exit program by pressing enter key
+input("\n\n   Press any key to continue...")
+db.close()
