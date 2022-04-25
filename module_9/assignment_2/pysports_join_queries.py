@@ -37,6 +37,7 @@ cursor = db.cursor()
 
 #doing inner join query
 cursor.execute("SELECT player_id, first_name, last_name, team_name FROM player INNER JOIN team ON player.team_id = team.team_id")
+
 players = cursor.fetchall()
 
 #using for loop to display player_id, first_name, last_name and team_name
