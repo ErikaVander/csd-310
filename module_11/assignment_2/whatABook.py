@@ -40,9 +40,6 @@ except mysql.connector.Error as err:
 #create cursor object
 cursor = db.cursor()
 
-#insert smeagol into table player
-#cursor.execute("INSERT INTO player (first_name, last_name, team_id) VALUES ('Smeagol', 'Shire Folk', 1)")
-
 class whatABook :
    navigation : String = "main menu"
    user_id : String = ""
@@ -91,7 +88,7 @@ class whatABook :
             self.promptUser()
 
    def show_books(self, _cursor) :
-      _cursor.execute("SELECT book.book_name, book.author, book.details_V FROM book")
+      _cursor.execute("SELECT book.book_name, book.author, book.description FROM book")
       books = _cursor.fetchall()
       print("\n---WhatABook books---")
       for book in books :
@@ -101,21 +98,22 @@ class whatABook :
       
 
    def show_locations(self, _cursor) :
-      _cursor.execute("SELECT locale FROM store")
+      _cursor.execute("SELECT locale_first_line, locale_second_line, hours FROM store")
       stores = _cursor.fetchall()
       print("\n---WhatABook store information---")
       for store in stores : 
-         print("\nStore location: \n   " + store[0] + "\nStore hours: ")
+         print("\nStore location: \n   " + store[0] + "\n   " + store[1] + "\n\nStore hours: \n   " + store[2])
       input("\nPress Enter to continue...")
       self.promptUser()
 
    def validate_user(self, _cursor) :
       user_id : String = input("\nPlease enter your user ID to login:\n")
-      _cursor.execute("SELECT user_id FROM user")
+      _cursor.execute("SELECT user_id, first_name, last_name FROM user")
       users = _cursor.fetchall()
       for user in users :
          if user_id == str(user[0]) :
-            print("Login successful")
+            print("\nLogin of " + user[1] + " " + user[2] + " successful")
+            input("Press Enter to continue...")
             self.navigation = "my account"
             self.user_id = str(user[0])
             self.promptUser()
